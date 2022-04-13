@@ -10,6 +10,14 @@
 </head>
 
 <body>
+     <!-- Nav -->
+    <nav class="container-fluid">
+      <ul>
+        <li><a href="./" class="contrast" onclick="event.preventDefault()"><strong>Brand</strong></a></li>
+      </ul>
+    </nav>
+
+
     <main class="container">
         <h1>How can we help You ? </h1>
         <form action="submittedForm.php" method="POST">
