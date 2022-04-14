@@ -26,11 +26,17 @@
             <div class="grid">
                 <p>
                     <?php
-                echo " <b> firstname : </b> ".$_POST["firstname"]."<br>";
-                echo "<b> lastname : </b>".$_POST["lastname"]."<br>";
-                echo "<b> email : </b>".$_POST["email"]."<br>";
-                echo "<b> issue : </b>".$_POST["issue"]."<br>";
-                echo "<b> message : </b>".$_POST["message"]."<br>";
+                        $firstname = htmlentities($_POST["firstname"]);
+                        $lastname = htmlentities($_POST["lastname"]);
+                        $email = htmlentities( filter_var($_POST["email"]), FILTER_SANITIZE_EMAIL);
+                        $issue = htmlentities($_POST["issue"]);
+                        $message = htmlentities($_POST["message"]);
+                        
+                echo " <b> firstname : </b> ".$firstname."<br>";
+                echo "<b> lastname : </b>".$lastname."<br>";
+                echo "<b> email : </b>".$email."<br>";
+                echo "<b> issue : </b>".$issue."<br>";
+                echo "<b> message : </b>".$message."<br>";
                 ?>
                 </p>
     

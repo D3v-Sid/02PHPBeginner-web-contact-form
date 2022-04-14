@@ -20,6 +20,7 @@
 
     <main class="container">
         <h1>How can we help You ? </h1>
+        <article>
         <form action="submittedForm.php" method="POST">
             <div class="grid">
                         <!-- FIRSTNAME -->
@@ -52,6 +53,7 @@
 
             <input type="submit" value="submit">
         </form>
+        </article>
       
     </main>
 </body>
