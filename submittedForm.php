@@ -38,7 +38,12 @@
             <?php
 
             ?>
-            <a href="#" class="contrast" role="button">Edit</a>
+            <a 
+            href="#"
+            onclick= "history.back(-1)";  
+            class="contrast" 
+            role="button">Edit</a>
+            
             <a href="#" role="button">Send</a>
         </div>
        <div class="hero-image"></div>     
@@ -51,6 +56,11 @@
 
 
 <style>
+
+article {
+  padding: 1rem;
+  overflow: hidden;
+}
 .hero-image {
     height: 100%;
     width: 100%;
