@@ -6,13 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
         <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
-        <title>Submitted </title>
+        <title>Form </title>
     </head>
     <body>
             <!-- Nav -->
         <nav class="container-fluid">
             <ul>
-                <li><a href="./" class="contrast" onclick="event.preventDefault()"><strong>Brand</strong></a></li>
+                <li><a href="index.php" class="contrast" onclick="event.preventDefault()"><strong>Brand</strong></a></li>
             </ul>
         </nav>
 
@@ -20,20 +20,20 @@
             <h1>How can we help you ? </h1>
             <article class="grid">
                 <div class="container-fluid">
-                        <form action="submittedForm.php" method="POST">
+                        <form action="confirm.php" method="POST">
                             <div class="grid">
                                 <!-- FIRSTNAME -->
                                 <label for="firstname"> First name
-                                    <input type="text" id="firstname" name="firstname" placeholder="First name" required>
+                                    <input type="text" id="firstname" name="firstname" placeholder="First name" autocomplete="given-name" required>
                                 </label>
                                 <!-- LASTNAME -->
                                 <label for="lastname">Last name
-                                    <input type="text" id="lastname" name="lastname" placeholder="Last name" required>
+                                    <input type="text" id="lastname" name="lastname" placeholder="Last name" autocomplete="family-name" required>
                                 </label>
                             </div>
                                 <!-- EMAIL -->
                             <label for="email">Email address
-                                <input type="email" id="email" name="email" placeholder="Email address" required>
+                                <input type="email" id="email" name="email" placeholder="Email address"  autocomplete="email" required>
                             </label>
                                 <!-- ISSUE -->
                             <label for="issue">Issue
@@ -50,7 +50,7 @@
                                 <textarea  id="message" name="message" required></textarea>
                             </label>
 
-                            <input type="submit" value="submit">
+                            <input type="submit" class="contrast" value="submit">
                         </form>
             
                 </div>

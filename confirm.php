@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
-    <title>Submitted </title>
+    <title>Confirm </title>
 </head>
 <body>
         <!-- Nav -->
@@ -44,19 +44,37 @@
             <?php
 
             ?>
-            <a 
-            href="#"
-            onclick= "history.back(-1)";  
-            class="contrast" 
-            role="button">Edit</a>
-            
-            <a href="#" role="button">Send</a>
+            <footer>
+              <a 
+              href="#"
+              onclick= "history.back(-1)";  
+              class="contrast" 
+              role="button">Edit</a>
+              <a 
+              href="#" 
+              onclick="handleModal()"
+              role="button">Send</a>
+            </footer>
         </div>
        <div class="hero-image"></div>     
     </article>  
+ </main>   
 
-
- </main>    
+         <!-- MODAL  -->
+ <dialog open class="modal">
+  <article>
+    <h3>Thanks for your submission</h3>
+    <p>
+      Mauris non nibh vel nisi sollicitudin malesuada. 
+      Ut consectetur placerat pulvinar.
+    </p>
+    <footer>
+      <a href="#" onclick=handleModal() role="button">Confirm</a>
+    </footer>
+  </article>
+</dialog>
+ 
+ 
 </body>
 </html>
 
@@ -75,4 +93,17 @@ article {
     background-position: center;
     background-size: cover;
 }
+.modal{
+  display: none;
+}
+
 </style>
+
+<script>
+      const modal= document.querySelector(".modal");
+
+    function handleModal(){
+      console.log(modal.style.display);
+      modal.style.display === "none"? modal.style.display = "block" :  modal.style.display = "none";
+    }
+</script>
