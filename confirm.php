@@ -61,20 +61,32 @@
  </main>   
 
          <!-- MODAL  -->
- <dialog open class="modal">
+ <dialog open id="modal" class="hidden">
   <article>
-    <h3>Thanks for your submission</h3>
+    <h3>Thank you for getting in touch! </h3>
     <p>
-      Mauris non nibh vel nisi sollicitudin malesuada. 
-      Ut consectetur placerat pulvinar.
+      We appreciate you contacting us. 
+      One of our colleagues will get back in touch with you soon!
+
     </p>
     <footer>
-      <a href="#" onclick=handleModal() role="button">Confirm</a>
+      <a href="/index.php"> 
+        <button onclick=handleModal() class="contrast"> Have a great day! </button>
+      </a>
     </footer>
   </article>
 </dialog>
  
  
+    <script>
+      const modal= document.getElementById("modal")
+
+      function handleModal(){
+      console.log(modal.classList);
+      modal.classList.toggle("hidden");
+      }
+    </script>
+
 </body>
 </html>
 
@@ -93,17 +105,10 @@ article {
     background-position: center;
     background-size: cover;
 }
-.modal{
+.hidden{
   display: none;
 }
 
+
 </style>
 
-<script>
-      const modal= document.querySelector(".modal");
-
-    function handleModal(){
-      console.log(modal.style.display);
-      modal.style.display === "none"? modal.style.display = "block" :  modal.style.display = "none";
-    }
-</script>
