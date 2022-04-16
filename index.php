@@ -6,6 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
         <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+        <!-- Froala Editor style. -->
+        <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+        <!-- Include Editor JS files. -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
+
         <title>Form </title>
     </head>
     <body>
@@ -46,9 +51,11 @@
                                 </select>
                             </label>
                             <!-- FREE TEXT -->
-                            <label for="message">Your message
-                                <textarea  id="message" name="message" required></textarea>
-                            </label>
+                            <div>
+                                <label for="message">Your message
+                                    <textarea  id="message" name="message" required></textarea>
+                                </label>
+                            </div>
 
                             <input type="submit" class="contrast" value="submit">
                         </form>
@@ -57,7 +64,21 @@
                 </div>
                 <div class="hero-image"></div>     
             </article>  
-        </main>    
+        </main>
+        
+        
+        <textarea></textarea>
+        
+
+
+        <!-- Initialize the editor. -->
+        <script>
+            new FroalaEditor('textarea', 
+            {
+                toolbarButtons: ['bold', 'italic', 'underline', 'fontFamily', 'fontSize'],
+            }
+            );
+        </script>
     </body>
 </html>
 
@@ -76,4 +97,15 @@ article {
     background-position: center;
     background-size: cover;
 }
+
+textarea{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+
+}
+button {
+		width: auto !important;
+}
+
 </style>
