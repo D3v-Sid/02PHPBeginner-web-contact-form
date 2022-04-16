@@ -97,7 +97,6 @@ article {
     background-position: center;
     background-size: cover;
 }
-
 textarea{
     display: flex;
     flex-direction: column;
